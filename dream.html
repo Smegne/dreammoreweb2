@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream More Company - Digital Growth & Creative Training</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2C2E3E;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .announcement-section {
+  background-color: #2C2E3E; /* Dark blue-black */
+  color: white;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+  border-top: 3px solid #E66B2B;
+  border-bottom: 3px solid #E66B2B;
+}
+
+.announcement-track {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scrollAnnouncement 25s linear infinite;
+}
+
+.announcement-track h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  display: inline-block;
+}
+
+@keyframes scrollAnnouncement {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Font */
+@media (max-width: 768px) {
+  .announcement-track h1 {
+    font-size: 16px;
+  }
+}
+
+.testimonial-section {
+  background: linear-gradient(135deg, #E66B2B 0%, #2C2E3E 70%, #FFFFFF 100%);
+  padding: 60px 0;
+  color: white;
+}
+
+.section-title {
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    display: flex;
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.testimonial-section {
+  background: linear-gradient(135deg, #E66B2B 0%, #2C2E3E 70%, #FFFFFF 100%);
+  padding: 60px 0;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.testimonial-slider {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideLeft 20s linear infinite;
+}
+
+.testimonial-card {
+  width: 300px;
+  flex: 0 0 300px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(230, 107, 43, 0.6);
+  background: white;
+  padding: 20px;
+  color: #2C2E3E;
+}
+
+.testimonial-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  border: 3px solid #E66B2B;
+  display: block;
+}
+
+.card-text, .card-subtitle {
+  white-space: normal !important;
+  word-wrap: break-word;
+}
+
+.card-text {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  color: #555;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Infinite scroll animation */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 250px;
+    width: 250px;
+  }
+}
+
+
+/* Infinite scroll animation */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-slider {
+    flex-wrap: nowrap;
+  }
+  .testimonial-card {
+    flex: 0 0 250px;
+  }
+}
+        /* Why Choose Us Section */
+
+
+.why-choose-us {
+  background: #f7f8fc;
+  padding: 60px 0;
+  position: relative;
+  margin-bottom: 20%;
+}
+
+.circle-container {
+
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.circle {
+  width: 1000px;
+  height: 1000px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCircle 30s linear infinite;
+}
+
+.card-3d {
+  width: 250px;
+  height: 280px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: autoFlip 5s linear infinite;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-front {
+  background: linear-gradient(135deg,#0A2540, #E66B2B);
+  color: white;
+  font-weight: bold;
+}
+
+.card-back {
+  background: linear-gradient(135deg, #0A2540, #E66B2B);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card-front i.icon {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+@keyframes rotateCircle {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes autoFlip {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
+}
+
+
+        #portfolio {
+      background-color: #fdfdfd;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #2C2E3E;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #E66B2B;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Card Styles */
+  .card {
+    margin: 10px;
+    padding: 20px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  background-color: #ffffff;
+  box-shadow: 2px solid black 60px 160px rgba(10, 20, 0, 1.6); /* subtle default */
+  border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15), 0 0 8px rgba(230, 107, 43, 0.4); /* orange glow + depth */
+  border-color: #f5f5f5;
+}
+
+    .card-body img {
+      width: 60px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #0A2540;
+      font-weight: 600;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: #4B5563;
+    }
+
+    .card-body a {
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .card-body a:hover {
+      color: #0A2540;
+    }
+
+    @media (max-width: 767px) {
+      .card-body img {
+        width: 50px;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+    }
+
+         /* === About Section === */
+    #about {
+      position: relative;
+      overflow: hidden;
+      background: #f9f9f9;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: #2C2E3E;
+    }
+
+    .border_des {
+      border-left: 5px solid #E66B2B;
+      padding-left: 20px;
+    }
+
+    /* === Orbiting Center Text === */
+    .orbit-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .orbit-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: -300px center;
+      font-size: 60px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold;
+     color: #2C2E3E !important;
+      white-space: nowrap;
+      animation: revolve 10s linear infinite;
+    }
+
+    @keyframes revolve {
+      0% {
+        transform: rotate(0deg) translateX(300px) rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg) translateX(300px) rotate(-360deg);
+      }
+    }
+
+    /* === Corner Logos === */
+    .corner-logos {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .corner-logo {
+      position: absolute;
+      width:10%;
+      height: 15%;
+      padding: 6px;
+      background-color: #E66B2B; /* Blue-black background */
+      animation: moveAround 8s linear infinite;
+        border-radius: 50%;
+        box-shadow: 2 124px 128px #E66B2B;
+        background-color: #E66B2B;
+    }
+
+    .delay0 { animation-delay: 0s; }
+    .delay1 { animation-delay: 2s; }
+    .delay2 { animation-delay: 4s; }
+    .delay3 { animation-delay: 6s; }
+
+    @keyframes moveAround {
+      0%   { top: 0;    left: 0;    transform: translate(0, 0); }
+      25%  { top: 0;    left: 100%; transform: translate(-100%, 0); }
+      50%  { top: 100%; left: 100%; transform: translate(-100%, -100%); }
+      75%  { top: 100%; left: 0;    transform: translate(0, -100%); }
+      100% { top: 0;    left: 0;    transform: translate(0, 0); }
+    }
+
+    @media (max-width: 768px) {
+      .orbit-text {
+        transform-origin: -200px center;
+        font-size: 16px;
+      }
+      .corner-logo {
+        width: 50%;
+        height: 50%;
+        animation: moveAround 10s linear infinite;
+        border-radius: 50%;
+      }
+    }
+        /* Navbar Styling */
+        .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+  background: transparent; /* initial background */
+  padding: 15px 30px; 
+}
+
+.navbar.scrolled {
+    margin-bottom: 10px;
+  background: linear-gradient(135deg, #2C2E3E, #E66B2B);
+  box-shadow: 1px solid black 20px 60px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand img {
+
+
+           
+            border-radius: 50%;
+        }
+        :hover img {
+            transform: rotate(360deg);
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #E66B2B !important;
+        }
+        .nav-link {
+            color: #FFFFFF !important;
+            font-weight: 500;
+            margin-left: 25px;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #E66B2B !important;
+        }
+        .hero-section {
+            background: url('../images/chatdream.png') center/cover no-repeat;
+            color: #FFFFFF;
+            height: 200vh;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: linear-gradient(135deg, rgba(44, 46, 62, 0.7), rgba(230, 107, 43, 0.3)); */
+            z-index: 1;
+            animation: gradientShift 10s infinite alternate;
+        }
+        /* @keyframes gradientShift {
+            from { background: linear-gradient(135deg, rgba(44, 46, 62, 0.7), rgba(230, 107, 43, 0.3)); }
+            to { background: linear-gradient(135deg, rgba(230, 107, 43, 0.3), rgba(44, 46, 62, 0.7)); }
+        } */
+        .hero-section > * {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+
+       .border_des {
+        color: #FFFFFF;
+              background: linear-gradient(135deg, #2C2E3E 30%, #E66B2B 100%);
+            border: 2px solid #E66B2B;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(44, 46, 62, 0.1);
+        }
+        #about h3{
+            color: #2C2E3E;
+            padding: 8px auto;
+            background-color: #F9FAFB;
+
+        }
+
+        #training {
+            margin-top: 30px;
+             background: linear-gradient(135deg, #2C2E3E 50%, #E66B2B 100%);
+            padding: 80px 0;
+        }
+
+        #training h2 {
+            padding: 15px;
+           background-color: #E66B2B;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-radius: 15px;
+        }
+
+        #services {
+            color: #FFFFFF;
+            background: linear-gradient(135deg,#E66B2B 0%, #2C2E3E 100% );
+            padding: 80px 0;
+        }
+          #services h2 {
+            border-radius: 15px;
+            padding: 15px;
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .team-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.team-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollTeam 30s linear infinite;
+}
+
+.team-card {
+  background: white;
+  color: #2C2E3E;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-content {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(230, 107, 43, 0.85);
+  opacity: 0;
+  transition: opacity 0.4s;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-card:hover .overlay {
+  opacity: 1;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+@keyframes scrollTeam {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-card {
+    width: 200px;
+  }
+}
+
+        .register-section .container {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+            padding: 60px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(44, 46, 62, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .register-section .container h2 {
+            background: linear-gradient(135deg, #2C2E3E 0%, #E66B2B 100%);
+            color: #FFFFFF;
+            padding: 60px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(44, 46, 62, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-orange {
+            background-color: #E66B2B;
+            border: none;
+            color: #FFFFFF;
+            padding: 12px 35px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(230, 107, 43, 0.4);
+        }
+        .btn-orange:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 107, 43, 0.6);
+            background-color: #d65a1f;
+        }
+        .btn-outline-light {
+             background: linear-gradient(135deg, #2C2E3E 0%, #E66B2B 100%);
+            border-color: #FFFFFF;
+            color: #FFFFFF;
+            padding: 12px 35px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+        }
+        .btn-outline-light:hover {
+            background-color: #E66B2B;
+            border-color: #E66B2B;
+            color: #FFFFFF;
+        }
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2C2E3E;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #E66B2B;
+            border-radius: 2px;
+        }
+        .card-service, .card-training {
+            background: #FFFFFF;
+            border: 1px solid #E66B2B;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 55px rgba(11, 11, 12, 0.1);
+        }
+        .card-service:hover, .card-training:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(44, 46, 62, 0.1);
+        }
+        .card-service i, .card-training i {
+            font-size: 2.5rem;
+            color: #E66B2B;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .card-service:hover i, .card-training:hover i {
+            transform: rotate(15deg);
+        }
+        .card-training .apply-btn {
+            display: none;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        .card-training:hover .apply-btn {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .portfolio-section, .why-choose-us {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+        }
+        .testimonial-section {
+            padding: 80px 0;
+            background-color: #F9FAFB;
+        }
+        .contact-section {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+            padding: 80px 0;
+        }
+        .form-control {
+            border-radius: 10px;
+            padding: 15px;
+            border-color: #D3D3D3;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #E66B2B;
+            box-shadow: 0 0 8px rgba(230, 107, 43, 0.3);
+        }
+        .social-icons a {
+            color: #FFFFFF;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #E66B2B;
+            transform: scale(1.2);
+        }
+        footer {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 1rem;
+        }
+         /* Stats Cards Styling */
+        .stats-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #FFFFFF 70%, #F9FAFB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-cards {
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .stats-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 30px 60px rgba(44, 46, 62, 0.2);
+            transition: all 0.5s ease;
+            flex: 1;
+            margin: 0 15px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .stats-card:nth-child(1) {
+            background-color: #E66B2B;
+            color: #FFFFFF;
+        }
+        .stats-card:nth-child(2) {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+        }
+        .stats-card:nth-child(3) {
+            background-color: #E66B2B;
+            color: #FFFFFF;
+        }
+        .stats-card:nth-child(4) {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+        }
+        .stats-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 30px 60px rgba(44, 46, 62, 0.2);
+        }
+        .stats-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .stats-card .counter {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        @media (max-width: 767px) {
+            .stats-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .stats-card {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+        }
+        /* Register Section Styling */
+        .register-section {
+            padding: 80px 0;
+            background-color: #F9FAFB;
+            text-align: center;
+            position: relative;
+        }
+        .register-section h2 {
+            font-size: 2.5rem;
+            color: #2C2E3E;
+            margin-bottom: 25px;
+        }
+        .register-section p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+        /* Team Section Styling with Animations */
+        .team-section {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .team-card {
+            width: 100%;
+            max-width: 280px;
+            background: #2C2E3E;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 1px solid black 66px 200px rgba(44, 46, 2, 0.9);
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.6s ease;
+            padding: 10px;
+        }
+        .team-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .team-card img {
+            margin: auto;
+            width: 150px;
+            height: 150px;
+         
+            transition: filter 0.3s ease;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(44, 46, 62, 0.1);
+            border: 5px solid  #2C2E3E;
+        }
+        .team-card:hover img {
+            filter: brightness(1.4);
+        }
+        .team-card .card-content {
+            padding: 20px;
+            text-align: center;
+            background: #F9FAFB;
+        }
+        .team-card .card-content h5 {
+            color: #2C2E3E;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .team-card .card-content p {
+            color: #666;
+            font-size: 1rem;
+        }
+        .team-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            background: rgba(230, 107, 43, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .team-card:hover .overlay {
+            opacity: 1;
+        }
+        .team-card .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+        .team-card .social-icons a {
+            color: #FFFFFF;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+        .team-card .social-icons a:hover {
+            transform: scale(1.3);
+        }
+        /* Modal Styling */
+        .modal-content {
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            background: #FFFFFF;
+        }
+        .modal-header {
+            border-bottom: none;
+        }
+        .modal-title {
+            color: #2C2E3E;
+            font-weight: 700;
+        }
+        .modal-body .form-control {
+            border-color: #D3D3D3;
+            border-radius: 10px;
+        }
+        .modal-body .btn-orange {
+            width: 100%;
+            margin-top: 15px;
+        }
+        .modal-body .forgot-password,
+        .modal-body .sign-up,
+        .modal-body .login-link {
+            color: #E66B2B;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .modal-body .forgot-password:hover,
+        .modal-body .sign-up:hover,
+        .modal-body .login-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .team-card {
+                max-width: 100%;
+            }
+            .register-section h2 {
+                font-size: 2rem;
+            }
+            .register-section p {
+                font-size: 1.1rem;
+            }
+            #enrollModal .modal-dialog {
+                margin: 10px;
+            }
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+        /* Animation Styles */
+        .animated-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="../images/dream.jpg" alt="Dream More Logo" width="60" height="60" ></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#training">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn btn-orange" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" value="smegndestew53@gmail.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" value="********" required>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <button type="submit" class="btn btn-orange">Login</button>
+                        <p class="mt-3"><a href="#" class="sign-up" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Don't have an account? Sign Up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Join The Network</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-4">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter your Email Address" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="********" required>
+                        </div>
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">I agree to the privacy policy and terms of service</label>
+                        </div>
+                        <button type="submit" class="btn btn-orange">Agree and Join</button>
+                        <p class="mt-3"><a href="#" class="login-link" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Already have an account? Log in</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enroll Modal -->
+    <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enrollModalLabel">Enroll in a Course</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group mb-4">
+                            <label for="enrollFullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="enrollFullName" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="enrollEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="enrollEmail" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="enrollPhone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="enrollPhone" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="enrollCourse" class="form-label">Course Selection</label>
+                            <select class="form-control" id="enrollCourse" required>
+                                <option value="" disabled selected>Select a Course</option>
+                                <option value="graphic-design">Graphic Design</option>
+                                <option value="video-editing">Video Editing</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="web-development">Web Development</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-orange mt-4">Submit Enrollment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ask Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="quoteModalLabel">Get a Quote</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form id="quoteForm">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+          </div>
+          <div class="mb-3">
+            <label for="emailAddress" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="userMessage" class="form-label">Your Message</label>
+            <textarea class="form-control" id="userMessage" rows="4" placeholder="Tell us what you need..." required></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-dark">Submit Request</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section animated-section hero">
+        <div class="container">
+         
+    <!-- Announcement Section -->
+<div class="announcement-section">
+  <div class="announcement-track">
+    <h1>🎉 Welcome to Dream More Company &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 🚀 Next Class Starts June 15 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 📢 Register Now to Reserve Your Spot!</h1>
+  </div>
+</div>
+            
+            <br><br>
+            <h1>Your Partner in Digital Growth & Creative Training</h1>
+            <p>Fueling Your Business Dreams – Empowering Brands, Transforming Careers</p>
+           <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#quoteModal">Get Quet</button>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll in a Course</button>
+        </div>
+    </section>
+
+    <!-- Stats Cards Section -->
+    <section class="stats-section animated-section">
+        <div class="container">
+            <div class="stats-cards">
+                <div class="stats-card">
+                    <h3>Students</h3>
+                    <div class="counter" data-target="500">0</div>
+                </div>
+                <div class="stats-card">
+                    <h3>Graduates</h3>
+                    <div class="counter" data-target="120">0</div>
+                </div>
+                <div class="stats-card">
+                    <h3>Award-Winning</h3>
+                    <div class="counter" data-target="15">0</div>
+                </div>
+                <div class="stats-card">
+                    <h3>Faculties</h3>
+                    <div class="counter" data-target="10">0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- About Us Section -->
+     <!-- About Us Section -->
+  <section id="about" class="py-5 animated-section">
+
+    <!-- Center Orbit Text -->
+    <div class="orbit-container">
+      <div class="orbit-text">DreamMore Company</div>
+    </div>
+
+    <!-- Corner Logos Animation -->
+    <div class="corner-logos">
+      <img src="../images/dream.jpg" class="corner-logo delay0" alt="DreamMore Logo" />
+      <img src="../images/dream.jpg" class="corner-logo delay1" alt="DreamMore Logo" />
+      <img src="../images/dream.jpg" class="corner-logo delay2" alt="DreamMore Logo" />
+      <img src="../images/dream.jpg" class="corner-logo delay3" alt="DreamMore Logo" />
+    </div>
+
+    <div class="container">
+      <h2 class="section-title"><strong>About Us</strong></h2>
+      <div class="row align-items-center border_des">
+        <div class="col-md-6 border_des">
+          <p class="lead">
+            Dream More Company is a creative and digital solutions company driven by the mission to empower businesses and aspiring professionals in the digital age. We are passionate about two things: helping brands grow and helping people learn.
+          
+           
+        
+            At the same time, Dream More is a launchpad for talent. We provide high-quality training in areas like:
+            <br><br>
+            ✅ Full Stack Web Development<br>
+            ✅ Graphic Design<br>
+            ✅ Video Editing<br>
+            ✅ Digital Marketing<br>
+            ✅ Basic Computer Skills
+          </p>
+
+          <h3 class="mt-4" style="color: #2C2E3E;"><strong>Our Mission</strong></h3>
+          <p>
+            To empower individuals and businesses through innovative digital solutions and high-quality creative training, fostering growth and success in a dynamic global market.
+            <br><br>
+            ✅ Empower Businesses<br>
+            ✅ Innovative Digital Solutions<br>
+            ✅ High-Quality Creative Training<br>
+            ✅ Fostering Growth and Success<br>
+            ✅ In a Dynamic Global Market
+          </p>
+
+          <h3 class="mt-4" style="color: #2C2E3E;"><strong>Our Vision</strong></h3>
+          <p>
+            To be a leading force in digital transformation and creative education, recognized worldwide for excellence, innovation, and community impact by 2030.
+            <br><br>
+            🏆 A Leading Force in Digital Transformation<br>
+            🏆 Creative Education for All<br>
+            🏆 Recognized Worldwide for Excellence<br>
+            🏆 Innovation and Community Impact
+          </p>
+        </div>
+        
+        <div class="col-md-6">
+          <img src="../images/banner.jpg" alt="Creative Team" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto; border: 5px solid #E66B2B;">
+        </div>
+         <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#enrollModal">About us</button>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Business Solutions -->
+    <section id="services" class="py-5 animated-section">
+        <div class="container">
+            <h2 class="section-title">Our Business Solutions</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card card-service">
+                        <div class="card-body">
+                            <i class="fas fa-palette"></i>
+                            <h5 class="card-title">Logo Design</h5>
+                            <p class="card-text">Unique and memorable logos tailored to your brand identity, delivered with a branding guide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-service">
+                        <div class="card-body">
+                            <i class="fas fa-laptop-code"></i>
+                            <h5 class="card-title">Website Development</h5>
+                            <p class="card-text">SEO-friendly, fast, and mobile-ready websites built with HTML, CSS, JS, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-service">
+                        <div class="card-body">
+                            <i class="fas fa-bullhorn"></i>
+                            <h5 class="card-title">Advertising & Campaigns</h5>
+                            <p class="card-text">Boost visibility with targeted ads on Facebook, Instagram, Google, and YouTube.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section id="training" class="py-5 bg-light animated-section">
+        <div class="container">
+            <h2 class="section-title">Our Training Programs</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-paint-brush"></i>
+                            <h5 class="card-title">Graphic Design</h5>
+                            <p class="card-text">Master Photoshop, Illustrator, and Canva for branding and social media visuals.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-video"></i>
+                            <h5 class="card-title">Video Editing</h5>
+                            <p class="card-text">Learn Premiere Pro, After Effects, and mobile apps for professional video content.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line"></i>
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">Gain expertise in SEO, social media, Google Ads, and email marketing.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-code"></i>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Build responsive websites with HTML, CSS, JavaScript, WordPress, and React.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section animated-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-5"><strong>Our Portfolio</strong></h2>
+    <div class="row text-center">
+
+      <!-- Logo Projects -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <img src="https://img.icons8.com/color/96/design--v1.png" alt="Logo Design" class="mb-3">
+            <h5 class="card-title">Logos</h5>
+            <p class="card-text">We’ve designed powerful brand identities for:</p>
+            <ul class="list-unstyled text-muted">
+              <li>✓ ShineTech</li>
+              <li>✓ EduSmart</li>
+              <li>✓ BDU Market</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Projects -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <img src="https://img.icons8.com/color/96/source-code.png" alt="Web Development" class="mb-3">
+            <h5 class="card-title">Web Projects</h5>
+            <p class="card-text">Fully developed and deployed web applications:</p>
+            <ul class="list-unstyled">
+              <li><a href="#" target="_blank" style="color: #E66B2B;">sim26.netlify.app</a></li>
+              <li><a href="https://liveshare.kesug.com" target="_blank" style="color: #E66B2B;">liveshare.kesug.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ad Campaigns -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <img src="../images/ad.webp" alt="Ad Campaigns" class="mb-3"width="">
+            <h5 class="card-title">Ad Campaigns</h5>
+            <p class="card-text">Creative campaigns and promotional visuals for:</p>
+            <ul class="list-unstyled text-muted">
+              <li>✓ FreshHub</li>
+              <li>✓ Zena Store Ethiopia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Register Now Section -->
+    <section class="register-section animated-section">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join our next training session and unlock your potential with expert-led courses. Enroll today to secure your spot!</p>
+            <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#enrollModal">Register Now</button>
+        </div>
+    </section>
+
+ <!-- Team Section -->
+<section id="team" class="team-section animated-section" style="background: linear-gradient(135deg, #E66B2B 0%, #2C2E3E 70%); color: white;">
+  <div class="container">
+    <h2 class="section-title text-white text-center mb-5">Our Team</h2>
+    
+    <div class="team-slider">
+      <div class="team-track">
+        <!-- Team Cards (duplicate set for seamless loop) -->
+        <div class="team-card">
+          <img src="../images/abebe.jpg" alt="Abebe Mekonnen">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="card-content">
+            <h5>Abebe Mekonnen</h5>
+            <p>Founder & CEO<br>10+ years in branding</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="../images/smegn.jpg" alt="Smegn Destew">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="https://smegndestewportfolio.vercel.app/"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="card-content">
+            <h5>Smegn Destew</h5>
+            <p>Trainer and instructor as Full Stack Dev<br>MERN Stack and freelancer</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="https://rb.gy/qhxf2n" alt="Almaz Kifle">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="card-content">
+            <h5>Almaz Kifle</h5>
+            <p>Lead Designer<br>Adobe & Branding</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="https://rb.gy/qdwk7r" alt="Yosef Tadesse">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="card-content">
+            <h5>Yosef Tadesse</h5>
+            <p>Marketing Director<br>Meta & Google Ads</p>
+          </div>
+        </div>
+
+         <div class="team-card">
+          <img src="https://rb.gy/05l9b7" alt="Elsa Tesfaye">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="card-content">
+            <h5>Almaz Kifle</h5>
+            <p>Lead Designer<br>Adobe & Branding</p>
+          </div>
+        </div>
+
+        <!-- Duplicate for infinite loop -->
+        <!-- Copy same team-cards again below -->
+        <div class="team-card">
+          <img src="../images/abebe.jpg" alt="Abebe Mekonnen">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="card-content">
+            <h5>Abebe Mekonnen</h5>
+            <p>Founder & CEO<br>10+ years in branding</p>
+          </div>
+        </div>
+
+        <!-- Add other team cards duplicated here too -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Why Choose Dream More? Section -->
+<section id="why-us" class="why-choose-us animated-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Why Choose Dream More?</h2>
+
+    <div class="circle-container">
+      <div class="circle">
+        <!-- Card 1 -->
+        <div class="card-3d" style="--i:0">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-certificate icon"></i>
+              <h5>Certified Instructors</h5>
+            </div>
+            <div class="card-back">
+              <p>Learn from experienced professionals with industry-recognized certifications.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-3d" style="--i:1">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-briefcase icon"></i>
+              <h5>Real-World Projects</h5>
+            </div>
+            <div class="card-back">
+              <p>Gain hands-on experience with client projects and practical assignments.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-3d" style="--i:2">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-user-graduate icon"></i>
+              <h5>Mentorship & Internships</h5>
+            </div>
+            <div class="card-back">
+              <p>Receive one-on-one guidance and internship opportunities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card-3d" style="--i:3">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-globe icon"></i>
+              <h5>All-in-One Solutions</h5>
+            </div>
+            <div class="card-back">
+              <p>Business branding and personal training under one roof.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card-3d" style="--i:4">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-lightbulb icon"></i>
+              <h5>Creative Thinking</h5>
+            </div>
+            <div class="card-back">
+              <p>Encouraging innovation through creativity and collaboration.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card-3d" style="--i:5">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-code icon"></i>
+              <h5>Tech Expertise</h5>
+            </div>
+            <div class="card-back">
+              <p>Master modern technologies in design and development.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card-3d" style="--i:6">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-users icon"></i>
+              <h5>Community Support</h5>
+            </div>
+            <div class="card-back">
+              <p>Grow within a supportive learning and business community.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card-3d" style="--i:7">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-chart-line icon"></i>
+              <h5>Growth Oriented</h5>
+            </div>
+            <div class="card-back">
+              <p>Focus on personal and business success with measurable outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br>
+
+    <section id="testimonials" class="testimonial-section animated-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">What Our Clients Say</h2>
+    <div class="testimonial-slider">
+      <!-- Testimonial 1 -->
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ravi S." class="testimonial-photo" />
+          <p class="card-text">"Dream More built our brand from scratch. Everything was flawless."</p>
+          <h6 class="card-subtitle text-muted">— Ravi S., Business Owner</h6>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Puja M." class="testimonial-photo" />
+          <p class="card-text">"I landed my first freelance job 2 months after the course!"</p>
+          <h6 class="card-subtitle text-muted">— Puja M., Trainee</h6>
+        </div>
+      </div>
+
+      <!-- Duplicate testimonials for seamless loop -->
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ravi S." class="testimonial-photo" />
+          <p class="card-text">"Dream More built our brand from scratch. Everything was flawless."</p>
+          <h6 class="card-subtitle text-muted">— Ravi S., Business Owner</h6>
+        </div>
+      </div>
+
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Puja M." class="testimonial-photo" />
+          <p class="card-text">"I landed my first freelance job 2 months after the course!"</p>
+          <h6 class="card-subtitle text-muted">— Puja M., Trainee</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Contact Section -->
+<section id="contact" class="contact-section py-5" style="background: linear-gradient(135deg, #E66B2B 0%, #2C2E3E 70%); color: white;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-uppercase">Get in Touch</h2>
+      <p class="text-white-50">We’d love to hear from you. Reach out via the contact info or map below.</p>
+    </div>
+    
+    <div class="row align-items-start">
+      <!-- Contact Info -->
+      <div class="col-md-6 mb-4">
+        <h4 class="mb-3">Contact Information</h4>
+        <p><strong>Phone:</strong> +251 911 234 567</p>
+        <p><strong>Email:</strong> 
+          <a href="mailto:info@dreammorecompany.com" style="color: #FFD6BA;">info@dreammorecompany.com</a>
+        </p>
+        <p><strong>Location:</strong> Bahir Dar, Ethiopia</p>
+        <div class="mt-3 d-flex gap-3 fs-5">
+          <a href="https://facebook.com/dreammorecompany" target="_blank" class="text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/dreammorecompany" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/dreammore" target="_blank" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://youtube.com/@dreammorecompany" target="_blank" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="col-md-6">
+        <div class="ratio ratio-4x3 rounded shadow">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1516.06360028431!2d37.38714423257079!3d11.587027749464472!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1644d23307d78069%3A0xab0b134f632dff8!2sBahir%20Dar!5e1!3m2!1sen!2set!4v1749946075808!5m2!1sen!2set" 
+                  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Dream More Company. All rights reserved.</p>
+        <p>Prepared by Smegn Destew</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Custom JavaScript for Team Animation and Counters -->
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.animated-section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight - 100 && !section.classList.contains('visible')) {
+                    section.classList.add('visible');
+                }
+            });
+
+            const teamSection = document.querySelector('.team-section');
+            const teamCards = document.querySelectorAll('.team-card');
+            const rect = teamSection.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && !teamSection.classList.contains('animated')) {
+                teamCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 250);
+                });
+                teamSection.classList.add('animated');
+            }
+
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const updateCount = () => {
+                    const count = +counter.innerText.replace('+', '');
+                    const increment = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment) + (target > 99 ? '+' : '');
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target + (target > 99 ? '+' : '');
+                    }
+                };
+                const counterRect = counter.getBoundingClientRect();
+                if (counterRect.top >= 0 && counterRect.top <= window.innerHeight && !counter.classList.contains('counted')) {
+                    updateCount();
+                    counter.classList.add('counted');
+                }
+            });
+        });
+
+        
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    const hero = document.querySelector(".hero");
+
+    const heroBottom = hero.offsetHeight;
+
+    if (window.scrollY > heroBottom - 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>

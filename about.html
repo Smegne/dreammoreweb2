@@ -1,0 +1,115 @@
+<!-- Testimonials -->
+<section id="testimonials" class="testimonial-section animated-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">What Our Clients Say</h2>
+    <div class="testimonial-slider">
+      <!-- Testimonial 1 -->
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ravi S." class="testimonial-photo" />
+          <p class="card-text">"Dream More built our brand from scratch. Everything was flawless."</p>
+          <h6 class="card-subtitle text-muted">— Ravi S., Business Owner</h6>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Puja M." class="testimonial-photo" />
+          <p class="card-text">"I landed my first freelance job 2 months after the course!"</p>
+          <h6 class="card-subtitle text-muted">— Puja M., Trainee</h6>
+        </div>
+      </div>
+
+      <!-- Duplicate testimonials for seamless loop -->
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ravi S." class="testimonial-photo" />
+          <p class="card-text">"Dream More built our brand from scratch. Everything was flawless."</p>
+          <h6 class="card-subtitle text-muted">— Ravi S., Business Owner</h6>
+        </div>
+      </div>
+
+      <div class="card testimonial-card">
+        <div class="card-body text-center">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Puja M." class="testimonial-photo" />
+          <p class="card-text">"I landed my first freelance job 2 months after the course!"</p>
+          <h6 class="card-subtitle text-muted">— Puja M., Trainee</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.testimonial-section {
+  background: linear-gradient(135deg, #E66B2B 0%, #2C2E3E 70%, #FFFFFF 100%);
+  padding: 60px 0;
+  color: white;
+}
+
+.section-title {
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.testimonial-slider {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideLeft 20s linear infinite;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(230, 107, 43, 0.6); /* brand orange shadow */
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #2C2E3E; /* dark blue-black text */
+}
+
+.testimonial-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  border: 3px solid #E66B2B;
+  display: block;
+}
+
+.card-text {
+  font-style: italic;
+  color: #2C2E3E;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  color: #555;
+  font-weight: 600;
+}
+
+/* Infinite scroll animation */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-slider {
+    flex-wrap: nowrap;
+  }
+  .testimonial-card {
+    flex: 0 0 250px;
+  }
+}
+</style>
